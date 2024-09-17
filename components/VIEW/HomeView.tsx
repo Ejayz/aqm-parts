@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function HomeView() {
-  const [image, setImage] = useState([
+  const [image] = useState([
     "3d_printing_bg_man_holding_peice.jpg",
     "3d_printing_bg.jpg",
     "cnc_man_operating.jpg",
