@@ -5,6 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "./Footer";
 export default function IndexHeader({
   children,
 }: Readonly<{
@@ -12,14 +13,18 @@ export default function IndexHeader({
 }>) {
   useEffect(() => {
     window.document ? Aos.init() : null;
-  }, [window]);
+  }, []);
 
   return (
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div data-aot={"zoom-out"} data-aos-anchor-placement="center-center" className="navbar bg-white w-full shadow-md  glass">
+        <div
+          data-aot={"zoom-out"}
+          data-aos-anchor-placement="center-center"
+          className="navbar bg-white w-full shadow-md  glass"
+        >
           <div className="flex-none lg:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -73,6 +78,7 @@ export default function IndexHeader({
         </div>
         {/* Page content here */}
         {children}
+        <Footer />
       </div>
       <div className="drawer-side">
         <label
