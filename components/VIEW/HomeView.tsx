@@ -13,22 +13,14 @@ export default function HomeView() {
     "product_idea_designing.jpg",
   ]);
 
-  const [index, setIndex] = useState(0);
-
-  setInterval(() => {
-    if (index === image.length - 1) {
-      setIndex(0);
-    } else {
-      setIndex(index + 1);
-    }
-  }, 1000);
-
   return (
     <div
       className={`hero min-h-screen bg-cover bg-center`}
-        style={{
-            backgroundImage: `url(/img/assets/${image[index]})`,
-        }}
+      style={{
+        backgroundImage: `url(/img/assets/${
+          image[Math.floor(Math.random() * image.length)]
+        })`,
+      }}
     >
       <div className="hero-overlay bg-opacity-30"></div>
       <div className="hero-content text-neutral-content text-center">
