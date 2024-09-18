@@ -57,7 +57,6 @@ export function FormTextArea({
   name,
   placeholder,
   label,
-  type,
   readonly,
 }: {
   errors: string | undefined;
@@ -178,7 +177,6 @@ export function FormSelect({
   name,
   placeholder,
   label,
-  type,
   readonly,
   options,
 }: {

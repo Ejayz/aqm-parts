@@ -9,13 +9,13 @@ export async function POST(req: NextRequest) {
 
   const date = DateTime.now().toLocaleString(DateTime.DATETIME_FULL);
 
-  let headersList = {
+  const headersList = {
     Accept: "*/*",
     "User-Agent": "Thunder Client (https://www.thunderclient.com)",
     "Content-Type": "application/json",
   };
 
-  let bodyContent = JSON.stringify({
+  const bodyContent = JSON.stringify({
     username: "Contact Alert Bot",
     content: `** AQM Parts Contact Form Alert ${date} :exclamation: ** 
     **Email**: ${email}
@@ -71,7 +71,7 @@ export async function POST(req: NextRequest) {
     attachments: [],
   });
 
-  let response = await fetch(DISCORD_WEB_HOOK, {
+  const response = await fetch(DISCORD_WEB_HOOK, {
     method: "POST",
     body: bodyContent,
     headers: headersList,
