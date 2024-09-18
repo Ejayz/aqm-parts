@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "./Footer";
 import { Toaster } from "react-hot-toast";
-import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 export default function IndexHeader({
   children,
 }: Readonly<{

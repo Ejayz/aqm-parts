@@ -15,7 +15,13 @@ export default function ContactView() {
   });
 
   const mutateContactForm = useMutation({
-    mutationFn: async (values: any) => {
+    mutationFn: async (values: {
+      name: string;
+      email: string;
+      phone: string;
+      message: string;
+      subject: string;
+    }) => {
       const response = await fetch("/api/public/contact_form", {
         method: "POST",
         headers: {
@@ -25,10 +31,10 @@ export default function ContactView() {
       });
       return response.json();
     },
-    onError: (error) => {
+    onError: () => {
       toast.error("Message failed to send.Please try again later.");
     },
-    onSuccess: (data) => {
+    onSuccess: () => {
       toast.success("Message sent successfully. We will get back to you soon.");
     },
   });
@@ -48,16 +54,20 @@ export default function ContactView() {
               }}
               validationSchema={contactFormValidation}
               onSubmit={(values, actions) => {
-                console.log(values)
-                mutateContactForm.mutate(values);
+                console.log(values);
+                mutateContactForm.mutate(values, {
+                  onSuccess: () => {
+                    actions.resetForm();
+                  },
+                });
               }}
             >
-              {({ errors, touched }: any) => (
+              {({ errors, touched }) => (
                 <Form className="p-12 gap-4 flex flex-col">
                   <h1 className="text-2xl font-bold">Contact Form</h1>
                   <FormInput
                     errors={errors.name}
-                    touched={touched.name}
+                    touched={touched.name?.toString()}
                     tooltip="Enter your full name"
                     name="name"
                     placeholder="John Doe"
@@ -65,7 +75,7 @@ export default function ContactView() {
                   />
                   <FormInput
                     errors={errors.email}
-                    touched={touched.email}
+                    touched={touched.email?.toString()}
                     tooltip="Enter your email address"
                     name="email"
                     placeholder="Email"
@@ -73,7 +83,7 @@ export default function ContactView() {
                   />
                   <FormInput
                     errors={errors.phone}
-                    touched={touched.phone}
+                    touched={touched.phone?.toString()}
                     tooltip="Enter your phone number"
                     name="phone"
                     placeholder="Phone"
@@ -81,7 +91,7 @@ export default function ContactView() {
                   />
                   <FormSelect
                     errors={errors.subject}
-                    touched={touched.subject}
+                    touched={touched.subject?.toString()}
                     tooltip="Select your subject"
                     name="subject"
                     label="Subject"
@@ -97,7 +107,7 @@ export default function ContactView() {
 
                   <FormTextArea
                     errors={errors.message}
-                    touched={touched.message}
+                    touched={touched.message?.toString()}
                     tooltip="Enter your message"
                     name="message"
                     placeholder="Message"
