@@ -1,16 +1,17 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function HomeView() {
+  const navs = useRouter();
   const [image] = useState([
-    "3d_printing_bg_man_holding_peice.jpg",
-    "3d_printing_bg.jpg",
-    "cnc_man_operating.jpg",
-    "cnc_man_standing.jpg",
-    "machining_bg.jpg",
-    "product_designing.jpg",
-    "product_idea_designing.jpg",
+    "3d_printing_bg_man_holding_peice.webp",
+    "3d_printing_bg.webp",
+    "cnc_man_operating.webp",
+    "cnc_man_standing.webp",
+    "machining_bg.webp",
+    "product_designing.webp",
   ]);
 
   return (
@@ -32,7 +33,14 @@ export default function HomeView() {
             assure you that our parts are of the highest quality metal and
             materials.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button
+            onClick={() => {
+              navs.push("/contact");
+            }}
+            className="btn btn-primary"
+          >
+            Get Started
+          </button>
         </div>
       </div>
     </div>
