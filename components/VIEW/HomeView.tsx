@@ -22,10 +22,10 @@ export default function HomeView() {
         })`,
       }}
     >
-      <div className="hero-overlay bg-opacity-30"></div>
+      <div className="hero-overlay bg-opacity-70"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md animate_fade_in">
-          <p className="mb-5 text-xl">
+          <p className="mb-5">
             <span className="font-bold">AQM Parts </span> is a company that
             provide the best quality and service in the manufacturing industry.
             We can provide you with the best parts for your needs, and we can
