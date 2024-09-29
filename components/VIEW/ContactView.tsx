@@ -63,8 +63,8 @@ export default function ContactView() {
               }}
             >
               {({ errors, touched }) => (
-                <Form className="p-12 gap-4 flex flex-col">
-                  <h1 className="text-2xl font-bold">Contact Form</h1>
+                <Form className="w-full justify-evenly gap-y-4 flex flex-col p-4 mx-auto my-auto">
+                  <h1 className="text-2xl indent-4 font-bold">Contact Form</h1>
                   <FormInput
                     errors={errors.name}
                     touched={touched.name?.toString()}
@@ -113,7 +113,7 @@ export default function ContactView() {
                     placeholder="Message"
                     label="Message"
                   />
-                  <div className="lg:mx-auto w-3/4">
+                  <div className="lg:mx-auto w-3/4 flex">
                     <button
                       type="submit"
                       className={`btn w-full ${
@@ -136,15 +136,15 @@ export default function ContactView() {
               )}
             </Formik>
           </div>
-          <div
-            className=" flex flex-col lg:w-3/4 w-full text-center  "
-            style={{
-              backgroundImage: `url(/img/assets/contact_us_customer.webp)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="bg-base-100 bg-opacity-30 flex flex-col p-12 w-full h-full">
+          <div className=" flex flex-col lg:w-3/4 w-full text-center  ">
+            <div
+              className="bg-base-100 bg-opacity-30 flex flex-col p-4 w-full h-full"
+              style={{
+                backgroundImage: `url(/img/assets/contact_us_customer.webp)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
               <h1 className="text-5xl mt-auto font-bold">Contact Us</h1>
               <p className="text-lg">
                 If you have any questions or concerns, please feel free to
