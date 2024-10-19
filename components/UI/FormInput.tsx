@@ -37,7 +37,7 @@ export function FormInput({
           type={type}
           placeholder={placeholder}
           name={name}
-          className={`input input-bordered w-auto max-w-md ${
+          className={`input bg-white input-bordered w-auto max-w-md ${
             errors && touched ? "input-error" : ""
           }`}
           disabled={readonly}
@@ -83,7 +83,7 @@ export function FormTextArea({
           as="textarea"
           name={name}
           disabled={readonly}
-          className={`textarea textarea-bordered w-auto max-w-md ${
+          className={`textarea bg-white textarea-bordered w-auto max-w-md ${
             errors && touched ? "input-error" : ""
           } `}
           placeholder={placeholder}
@@ -132,7 +132,7 @@ export function FormInputCheckBox({
           type={type}
           placeholder={placeholder}
           name={name}
-          className={`checkbox ${errors && touched ? "checkbox-error" : ""}`}
+          className={`checkbox bg-white ${errors && touched ? "checkbox-error" : ""}`}
           disabled={readonly}
         />
       </label>
@@ -166,7 +166,7 @@ export function DisplayFormData({
             </span>
           </span>
         </div>
-        <div className="input input-bordered flex flex-row ">
+        <div className="input bg-white input-bordered flex flex-row ">
           <span className=" my-auto">{value}</span>
         </div>
       </label>
@@ -208,7 +208,7 @@ export function FormSelect({
         <Field
           as="select"
           name={name}
-          className={`select select-bordered mx-auto w-full max-w-md ${
+          className={`select bg-white select-bordered mx-auto w-full max-w-md ${
             errors && touched ? "select-error" : ""
           }`}
           disabled={readonly}

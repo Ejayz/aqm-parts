@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
+import "react-image-gallery/styles/css/image-gallery.css";
+
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,7 +44,7 @@ export default function RootLayout({
         <link rel="manifest" href="/img/assets/favicon_io/site.webmanifest" />
       </head>
 
-      <body className={`${inter} antialiased`} data-theme="light">
+      <body className={`${inter} antialiased `} data-theme="light">
         {children}
       </body>
     </html>

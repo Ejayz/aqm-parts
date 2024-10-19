@@ -65,16 +65,16 @@ export default function IndexHeader({
                   <Link href="/"> Home </Link>
                 </li>
                 <li>
-                  <Link href="/about"> About </Link>
+                  <Link href="#contactus"> Contact </Link>
                 </li>
                 <li>
-                  <Link href="/contact"> Contact </Link>
+                  <Link href="#services"> Services </Link>
                 </li>
                 <li>
-                  <Link href="/services"> Services </Link>
+                  <Link href="#team"> Team </Link>
                 </li>
                 <li>
-                  <Link href="/productgallery"> Product Gallery </Link>
+                  <Link href="#productgallery"> Product Gallery </Link>
                 </li>
               </ul>
             </div>
@@ -97,16 +97,16 @@ export default function IndexHeader({
               <Link href="/"> Home </Link>
             </li>
             <li>
-              <Link href="/about"> About </Link>
+              <Link href="#contactus"> Contact </Link>
             </li>
             <li>
-              <Link href="/contact"> Contact </Link>
+              <Link href="#services"> Services </Link>
             </li>
             <li>
-              <Link href="/services"> Services </Link>
+              <Link href="#team"> Team </Link>
             </li>
             <li>
-              <Link href="/productgallery"> Product Gallery </Link>
+              <Link href="#productgallery"> Product Gallery </Link>
             </li>
           </ul>
         </div>
