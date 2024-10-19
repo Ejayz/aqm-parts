@@ -16,18 +16,19 @@ export default function HomeView() {
 
   return (
     <div
-      className={`hero min-h-screen bg-cover bg-center`}
+      className={`hero min-h-screen bg-cover bg-center `}
       style={{
         backgroundImage: `url(/img/assets/${
           image[Math.floor(Math.random() * image.length)]
         })`,
       }}
+      id="home"
     >
       <div className="hero-overlay bg-opacity-70"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md animate_fade_in">
           <p className="mb-5">
-            <span className="font-bold">AQM Parts </span> is a company that
+            <span className="font-bold ">AQM Parts </span> is a company that
             provide the best quality and service in the manufacturing industry.
             We can provide you with the best parts for your needs, and we can
             assure you that our parts are of the highest quality metal and
@@ -35,7 +36,7 @@ export default function HomeView() {
           </p>
           <button
             onClick={() => {
-              navs.push("/contact");
+              navs.push("#contactus");
             }}
             className="btn btn-primary"
           >

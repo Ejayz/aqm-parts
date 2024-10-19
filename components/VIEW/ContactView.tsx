@@ -5,6 +5,9 @@ import { FormInput, FormSelect, FormTextArea } from "../UI/FormInput";
 import * as Yup from "yup";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
+import Image from "next/image";
+
+
 export default function ContactView() {
   const contactFormValidation = Yup.object().shape({
     name: Yup.string().required("Name is required"),
@@ -41,9 +44,12 @@ export default function ContactView() {
 
   return (
     <>
-      <div className="w-full h-screen flex min-h-screen ">
+      <div
+        className="w-full h-auto flex min-h-screen bg-base-100 p-4 "
+        id="contactus"
+      >
         <div className="mx-auto my-auto w-3/4 lg:w-7/12 h-auto flex flex-col-reverse   lg:flex-row">
-          <div className="bg-base-100 lg:w-5/12 w-full rounded-tl-md rounded-bl-md shrink-0 shadow-2xl">
+          <div className="bg-white lg:w-5/12 w-full rounded-tl-md rounded-bl-md shrink-0 shadow-2xl">
             <Formik
               initialValues={{
                 name: "",
@@ -63,8 +69,8 @@ export default function ContactView() {
               }}
             >
               {({ errors, touched }) => (
-                <Form className="p-12 gap-4 flex flex-col">
-                  <h1 className="text-2xl font-bold">Contact Form</h1>
+                <Form className="w-full justify-evenly flex flex-col py-4 mx-auto my-auto">
+                  <h1 className="text-2xl indent-4 font-bold">Contact Form</h1>
                   <FormInput
                     errors={errors.name}
                     touched={touched.name?.toString()}
@@ -113,10 +119,10 @@ export default function ContactView() {
                     placeholder="Message"
                     label="Message"
                   />
-                  <div className="lg:mx-auto w-3/4">
+                  <div className="lg:mx-auto ml-4 w-3/4 flex">
                     <button
                       type="submit"
-                      className={`btn w-full ${
+                      className={` btn w-full ${
                         mutateContactForm.isPending
                           ? "btn-disabled"
                           : "btn-primary"
@@ -136,21 +142,93 @@ export default function ContactView() {
               )}
             </Formik>
           </div>
-          <div
-            className=" flex flex-col lg:w-3/4 w-full text-center  "
-            style={{
-              backgroundImage: `url(/img/assets/contact_us_customer.webp)`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="bg-base-100 bg-opacity-30 flex flex-col p-12 w-full h-full">
-              <h1 className="text-5xl mt-auto font-bold">Contact Us</h1>
-              <p className="text-lg">
+          <div className=" flex flex-col lg:w-3/4 w-full text-center relative text-neutral-content ">
+            <div className="w-full block h-full absolute bg-black  opacity-50"></div>
+            <div
+              className="bg-base-100 bg-opacity-50 flex = flex-col p-4 w-full h-full"
+              style={{
+                backgroundImage: `url(/img/assets/contact_us_customer.webp)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              {/* <h1 className="text-3xl mt-auto font-bold z-0">Contact Us</h1>
+              <p className="text-lg z-0 mb-4">
                 If you have any questions or concerns, please feel free to
                 contact us.
-              </p>
-              <p className="text-lg mb-auto">We are here to help you.</p>
+              </p> */}
+              <div className="my-auto z-0 ">
+                <h1 className="text-3xl mt-auto font-bold z-0">Get In Touch</h1>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    className="flex flex-col "
+                    href={
+                      "https://web.facebook.com/profile.php?id=61559089786607"
+                    }
+                    target="_blank"
+                  >
+                    <Image
+                      className="mx-auto"
+                      src="/img/svg/brand-facebook.svg"
+                      width={48}
+                      height={48}
+                      alt="Facebook"
+                    />
+
+                    <span className="text-center font-bold cursor-pointer">
+                      Assured Quality Manufacturing LLC
+                    </span>
+                  </a>
+                  <a
+                    className="flex flex-col "
+                    href={"https://discord.gg/9EEwhyqnAb"}
+                    target="_blank"
+                  >
+                    <Image
+                      className="mx-auto"
+                      src="/img/svg/brand-discord.svg"
+                      width={48}
+                      height={48}
+                      alt="Discord"
+                    />
+                    <span className="text-center  font-bold">AQM LLC</span>
+                  </a>
+                  <a className="flex flex-col ">
+                    <Image
+                      className="mx-auto"
+                      src="/img/svg/phone.svg"
+                      width={48}
+                      height={48}
+                      alt="Discord"
+                    />
+                    <span className="text-center  font-bold">585-410-3846</span>
+                  </a>
+                  <a className="flex flex-col ">
+                    <Image
+                      className="mx-auto"
+                      src="/img/svg/mail.svg"
+                      width={48}
+                      height={48}
+                      alt="Discord"
+                    />
+                    <span className="text-center  font-bold">
+                      info@aqm.parts
+                    </span>
+                  </a>
+                  <a className="flex flex-col col-span-2 cursor-pointer" href="https://maps.app.goo.gl/PduZXX1xhyWPJJsa8" target="_blank">
+                    <Image
+                      className="mx-auto"
+                      src="/img/svg/map.svg"
+                      width={48}
+                      height={48}
+                      alt="Discord"
+                    />
+                    <span className="text-center font-bold">
+                      Brooklet, GA 132843
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

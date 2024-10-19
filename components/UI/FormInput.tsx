@@ -23,8 +23,8 @@ export function FormInput({
   readonly?: boolean;
 }) {
   return (
-    <div>
-      <label className="form-control w-96 max-w-lg">
+    <div className="w-11/12 block ml-4">
+      <label className="form-control w-auto max-w-lg">
         <div className="label">
           <span className="label-text font-bold gap-x-2 flex flex-row">
             {label}
@@ -37,7 +37,7 @@ export function FormInput({
           type={type}
           placeholder={placeholder}
           name={name}
-          className={`input input-bordered w-full max-w-md ${
+          className={`input bg-white input-bordered w-auto max-w-md ${
             errors && touched ? "input-error" : ""
           }`}
           disabled={readonly}
@@ -46,7 +46,7 @@ export function FormInput({
 
       {errors && touched ? (
         <span className="text-error  flex flex-row">{errors}</span>
-      ) : null}
+      ) : <span className="text-error invisible flex flex-row">Error</span>}
     </div>
   );
 }
@@ -69,8 +69,8 @@ export function FormTextArea({
   readonly?: boolean;
 }) {
   return (
-    <div>
-      <label className="form-control w-96 max-w-lg">
+<div className="w-11/12 block ml-4">
+      <label className="form-control w-auto max-w-lg">
         <div className="label">
           <span className="label-text font-bold gap-x-2 flex flex-row">
             {label}
@@ -83,7 +83,7 @@ export function FormTextArea({
           as="textarea"
           name={name}
           disabled={readonly}
-          className={`textarea textarea-bordered h-24 ${
+          className={`textarea bg-white textarea-bordered w-auto max-w-md ${
             errors && touched ? "input-error" : ""
           } `}
           placeholder={placeholder}
@@ -92,7 +92,9 @@ export function FormTextArea({
 
       {errors && touched ? (
         <span className="text-error  flex flex-row">{errors}</span>
-      ) : null}
+      ) : (
+        <span className="text-error invisible flex flex-row">Error</span>
+      )}
     </div>
   );
 }
@@ -116,8 +118,8 @@ export function FormInputCheckBox({
   readonly?: boolean;
 }) {
   return (
-    <div>
-      <label className="form-control w-96 max-w-lg">
+    <div className="w-11/12 block ml-4">
+      <label className="form-control w-auto max-w-lg">
         <div className="label">
           <span className="label-text font-bold gap-x-2 flex flex-row">
             {label}
@@ -130,14 +132,16 @@ export function FormInputCheckBox({
           type={type}
           placeholder={placeholder}
           name={name}
-          className={`checkbox ${errors && touched ? "checkbox-error" : ""}`}
+          className={`checkbox bg-white ${errors && touched ? "checkbox-error" : ""}`}
           disabled={readonly}
         />
       </label>
 
       {errors && touched ? (
         <span className="text-error  flex flex-row">{errors}</span>
-      ) : null}
+      ) : (
+        <span className="text-error invisible flex flex-row">Error</span>
+      )}
     </div>
   );
 }
@@ -152,8 +156,8 @@ export function DisplayFormData({
   tooltip: string;
 }) {
   return (
-    <div className="">
-      <label className="form-control w-96 max-w-lg">
+    <div className="w-11/12 block ml-4">
+      <label className="form-control w-auto max-w-lg">
         <div className="label">
           <span className="label-text font-bold gap-x-2 flex flex-row">
             {label}
@@ -162,7 +166,7 @@ export function DisplayFormData({
             </span>
           </span>
         </div>
-        <div className="input input-bordered flex flex-row ">
+        <div className="input bg-white input-bordered flex flex-row ">
           <span className=" my-auto">{value}</span>
         </div>
       </label>
@@ -191,8 +195,8 @@ export function FormSelect({
   options: { value: string; label: string }[];
 }) {
   return (
-    <div className="items-center">
-      <label className="form-control w-96 max-w-lg">
+    <div className="w-11/12 block ml-4">
+      <label className="form-control w-auto max-w-lg">
         <div className="label">
           <span className="label-text font-bold gap-x-2 flex flex-row">
             {label}
@@ -204,7 +208,7 @@ export function FormSelect({
         <Field
           as="select"
           name={name}
-          className={`select select-bordered mx-auto ${
+          className={`select bg-white select-bordered mx-auto w-full max-w-md ${
             errors && touched ? "select-error" : ""
           }`}
           disabled={readonly}
@@ -220,7 +224,9 @@ export function FormSelect({
 
       {errors && touched ? (
         <span className="text-error  flex flex-row">{errors}</span>
-      ) : null}
+      ) : (
+        <span className="text-error invisible flex flex-row">Error</span>
+      )}
     </div>
   );
 }

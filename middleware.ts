@@ -11,12 +11,12 @@ export default async function RoutesMiddleWare(request: NextRequest) {
   const user = await supabase.auth.getUser(auth?.value);
 
   if (request.nextUrl.pathname.includes("/dashboard") && !user.data.user) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.redirect(new URL("/auth/login", request.url));
   } else if (
     request.nextUrl.pathname.includes("/api/v1/ops/") &&
     !user.data.user
   ) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.redirect(new URL("/auth/login", request.url));
   } else {
     return NextResponse.next();
   }
