@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import Image from "next/image";
-import { Facebook } from "lucide-react";
+
 
 export default function ContactView() {
   const contactFormValidation = Yup.object().shape({

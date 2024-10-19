@@ -1,10 +1,6 @@
 "use client";
-
-import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
 import ImageGallery from "react-image-gallery";
 export default function Product() {
-  const navs = useRouter();
 
   const images = [
     {

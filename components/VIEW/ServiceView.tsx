@@ -1,40 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 export default function ServiceView() {
-  const navs = useRouter();
-
-  const images = [
-    {
-      original: "/img/aqmproducts/Anchor.png",
-      thumbnail: "/img/aqmproducts/Anchor.png",
-    },
-    {
-      original: "/img/aqmproducts/DanielDefense.png",
-      thumbnail: "/img/aqmproducts/DanielDefense.png",
-    },
-    {
-      original: "/img/aqmproducts/Hooks.png",
-      thumbnail: "/img/aqmproducts/Hooks.png",
-    },
-    {
-      original: "/img/aqmproducts/HooksV2.png",
-      thumbnail: "/img/aqmproducts/HooksV2.png",
-    },
-    {
-      original: "/img/aqmproducts/HookV3.png",
-      thumbnail: "/img/aqmproducts/HookV3.png",
-    },
-    {
-      original: "/img/aqmproducts/MeatBall.png",
-      thumbnail: "/img/aqmproducts/MeatBall.png",
-    },
-    {
-      original: "/img/aqmproducts/TBH.png",
-      thumbnail: "/img/aqmproducts/TBH.png",
-    },
-  ];
 
   return (
     <div className=" bg-base-200 min-h-screen flex flex-col" id="services">
