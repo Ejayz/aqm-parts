@@ -45,7 +45,7 @@ export default function ContactView() {
   return (
     <>
       <div
-        className="w-full h-screen flex min-h-screen bg-base-100 "
+        className="w-full h-auto flex min-h-screen bg-base-100 p-4 "
         id="contactus"
       >
         <div className="mx-auto my-auto w-3/4 lg:w-7/12 h-auto flex flex-col-reverse   lg:flex-row">
@@ -119,10 +119,10 @@ export default function ContactView() {
                     placeholder="Message"
                     label="Message"
                   />
-                  <div className="lg:mx-auto w-3/4 flex">
+                  <div className="lg:mx-auto ml-4 w-3/4 flex">
                     <button
                       type="submit"
-                      className={`btn w-full ${
+                      className={` btn w-full ${
                         mutateContactForm.isPending
                           ? "btn-disabled"
                           : "btn-primary"
