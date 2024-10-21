@@ -15,12 +15,12 @@ export default function TeamView() {
               alt="3d-printer"
               width={200}
               height={200}
-              className="mx-auto rounded-full"
+              className="mx-auto rounded-lg"
             />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Joe Michielson</h2>
-            <h2 className="text-xl font-bold">President</h2>
+            <h2 className="text-base font-light">President</h2>
           </div>
         </div>
 
@@ -31,12 +31,12 @@ export default function TeamView() {
               alt="3d-printer"
               width={200}
               height={200}
-              className="mx-auto rounded-full"
+              className="mx-auto rounded-lg"
             />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Amanda Michielson</h2>
-            <h2 className="text-xl font-bold">Co-Founder</h2>
+            <h2 className="text-base font-light">Co-Founder</h2>
           </div>
         </div>
 
@@ -47,12 +47,12 @@ export default function TeamView() {
               alt="3d-printer"
               width={200}
               height={200}
-              className="mx-auto rounded-full"
+              className="mx-auto rounded-lg"
             />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Anthony Legno</h2>
-            <h2 className="text-xl font-bold">Head Machinist</h2>
+            <h2 className="text-base font-light">Head Machinist</h2>
           </div>
         </div>
 
@@ -63,15 +63,14 @@ export default function TeamView() {
               alt="3d-printer"
               width={200}
               height={200}
-              className="mx-auto rounded-full"
+              className="mx-auto rounded-lg"
             />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Alianne Legno</h2>
-            <h2 className="text-xl font-bold">Head Programmer</h2>
+            <h2 className="text-base font-light">Head Programmer</h2>
           </div>
         </div>
-
 
         <div className="card bg-base-100 w-96 glass shadow-xl">
           <figure className="px-10 pt-10">
@@ -80,15 +79,14 @@ export default function TeamView() {
               alt="3d-printer"
               width={200}
               height={200}
-              className="mx-auto rounded-full"
+              className="mx-auto rounded-lg"
             />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">Kristen Smeatin</h2>
-            <h2 className="text-xl font-bold">Social Media Manager</h2>
+            <h2 className="text-base font-light">Social Media Manager</h2>
           </div>
         </div>
-
 
         <div className="card bg-base-100 w-96 glass shadow-xl">
           <figure className="px-10 pt-10">
@@ -97,15 +95,14 @@ export default function TeamView() {
               alt="3d-printer"
               width={200}
               height={200}
-              className="mx-auto rounded-full"
+              className="mx-auto rounded-lg"
             />
           </figure>
           <div className="card-body items-center text-center">
             <h2 className="card-title">The People Design</h2>
-            <h2 className="text-xl font-bold">IT Services</h2>
+            <h2 className="text-base font-light">IT Services</h2>
           </div>
         </div>
-
       </div>
     </div>
   );

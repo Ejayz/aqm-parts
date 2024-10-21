@@ -30,12 +30,44 @@ export default function Product() {
       original: "/img/aqmproducts/TBH.png",
       thumbnail: "/img/aqmproducts/TBH.png",
     },
+    {
+      original: "/img/aqmproducts/AQM.png",
+      thumbnail: "/img/aqmproducts/AQM.png",
+    },
+    {
+      original: "/img/aqmproducts/CAH.png",
+      thumbnail: "/img/aqmproducts/CAH.png",
+    },
+    {
+      original: "/img/aqmproducts/CAM.png",
+      thumbnail: "/img/aqmproducts/CAM.png",
+    },
+    {
+      original: "/img/aqmproducts/COG.png",
+      thumbnail: "/img/aqmproducts/COG.png",
+    },
+    {
+      original: "/img/aqmproducts/COG2.png",
+      thumbnail: "/img/aqmproducts/COG2.png",
+    },
+    {
+      original: "/img/aqmproducts/CPS.png",
+      thumbnail: "/img/aqmproducts/CPS.png",
+    },
+    {
+      original: "/img/aqmproducts/MotorParts.png",
+      thumbnail: "/img/aqmproducts/MotorParts.png",
+    },
+    {
+      original: "/img/aqmproducts/TOMB.png",
+      thumbnail: "/img/aqmproducts/TOMB.png",
+    },
   ];
 
   return (
-    <div className="hero bg-base-200 min-h-screen " id="productgallery">
-      <div className="hero-content flex-col lg:flex-row">
-        <div className=" w-full p-4 rounded-lg shadow-2xl">
+    <div className="hero bg-base-200 min-h-screen w-full" id="productgallery">
+      <div className="hero-content flex-col  lg:w-full w-[600px] lg:flex-row">
+        <div className="relative w-3/4">
           <ImageGallery
             items={images}
             autoPlay={true}
@@ -48,9 +80,9 @@ export default function Product() {
             useBrowserFullscreen={true}
             showNav={false}
             showFullscreenButton={false}
+            additionalClass="w-auto "
           />
         </div>
-
         <div className="flex flex-col ">
           <h1 className="text-5xl font-bold text-center lg:text-left">
             Products Gallery
@@ -60,9 +92,6 @@ export default function Product() {
             quality as possible to make you happy. Take a look some of the
             product that we already produced.
           </p>
-          <button className="btn btn-primary md:mx-auto lg:ml-0">
-            Get Started
-          </button>
         </div>
       </div>
     </div>
