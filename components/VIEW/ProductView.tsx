@@ -6,10 +6,10 @@ export default function Product() {
       original: "/img/aqmproducts/Anchor.png",
       thumbnail: "/img/aqmproducts/Anchor.png",
     },
-    {
-      original: "/img/aqmproducts/DanielDefense.png",
-      thumbnail: "/img/aqmproducts/DanielDefense.png",
-    },
+   // {
+  //    original: "/img/aqmproducts/DanielDefense.png",
+  //    thumbnail: "/img/aqmproducts/DanielDefense.png",
+//    },
     {
       original: "/img/aqmproducts/Hooks.png",
       thumbnail: "/img/aqmproducts/Hooks.png",
