@@ -215,7 +215,7 @@ export default function ContactView() {
                      jmichielson@aqm.parts
                     </span>
                   </a>
-                  <a className="flex flex-col col-span-2 cursor-pointer" href="https://maps.app.goo.gl/PduZXX1xhyWPJJsa8" target="_blank">
+                  <a className="flex flex-col col-span-2 cursor-pointer" href="https://www.google.com/maps/place/Brooklet,+GA+30415,+USA/@32.3360444,-81.6747876,29402m/data=!3m1!1e3!4m6!3m5!1s0x88fa4c033892c0dd:0x2fa6e8febbdbb994!8m2!3d32.3240291!4d-81.5815776!16s%2Fm%2F03dpbj9?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
                     <Image
                       className="mx-auto"
                       src="/img/svg/map.svg"
