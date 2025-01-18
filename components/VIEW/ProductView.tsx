@@ -23,10 +23,6 @@ export default function Product() {
       thumbnail: "/img/aqmproducts/HookV3.png",
     },
     {
-      original: "/img/aqmproducts/MeatBall.png",
-      thumbnail: "/img/aqmproducts/MeatBall.png",
-    },
-    {
       original: "/img/aqmproducts/TBH.png",
       thumbnail: "/img/aqmproducts/TBH.png",
     },
