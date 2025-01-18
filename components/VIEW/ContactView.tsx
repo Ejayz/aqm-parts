@@ -212,7 +212,7 @@ export default function ContactView() {
                       alt="Discord"
                     />
                     <span className="text-center  font-bold">
-                      info@aqm.parts
+                     jmichielson@aqm.parts
                     </span>
                   </a>
                   <a className="flex flex-col col-span-2 cursor-pointer" href="https://maps.app.goo.gl/PduZXX1xhyWPJJsa8" target="_blank">
@@ -224,7 +224,7 @@ export default function ContactView() {
                       alt="Discord"
                     />
                     <span className="text-center font-bold">
-                      Brooklet, GA 132843
+                      Brooklet, GA 30415
                     </span>
                   </a>
                 </div>
